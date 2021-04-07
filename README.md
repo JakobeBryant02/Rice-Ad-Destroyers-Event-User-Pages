@@ -1,1 +1,0 @@
-# Rice-Ad-Destroyers-Event-User-Pages
