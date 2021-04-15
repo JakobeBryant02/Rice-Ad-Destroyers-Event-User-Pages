@@ -84,6 +84,7 @@
 
         if (window.webkitURL != null) {
             newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+            console.log (newLink);
         }
         else {
             newLink.href = window.URL.createObjectURL(textToBLOB);
