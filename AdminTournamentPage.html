@@ -31,25 +31,17 @@
         <!--Add few elements to the form-->
 
         <div>
-            <input type="text" id="txtName" placeholder="Enter your name" />
+            <input type="date" id="txtRegisterStart" placeholder="Select registration start date" />
         </div>
         <div>
-            <input type="text" id="txtAge" placeholder="Enter your age" />
+            <input type="date" id="txtRegisterEnd" placeholder="Select registration end date" />
         </div>
         <div>
-            <input type="text" id="txtEmail" placeholder="Enter your email address" />
+            <input type="date" id="txtSeasonStart" placeholder="Select season start date" />
         </div>
         <div>
-            <select id="selCountry">
-                <option selected value="">-- Choose the country --</option>
-                <option value="India">India</option>
-                <option value="Japan">Japan</option>
-                <option value="USA">USA</option>
-            </select>
-        </div>
-        <div>
-            <textarea id="msg" name="msg" placeholder="Write some message ..." style="height:100px"></textarea>
-        </div>
+            <input type="date" id="txtSeasonEnd" placeholder="Select season end date" />
+        
 
         <!--Add to button to save the data.-->
         <div>
@@ -57,42 +49,5 @@
         </div>
     </div>
 </body>
-<script>
-    let saveFile = () => {
-    	
-        // Get the data from each element on the form.
-    	const name = document.getElementById('txtName');
-        const age = document.getElementById('txtAge');
-        const email = document.getElementById('txtEmail');
-        const country = document.getElementById('selCountry');
-        const msg = document.getElementById('msg');
-        
-        // This variable stores all the data.
-        let data = 
-            '\r Name: ' + name.value + ' \r\n ' + 
-            'Age: ' +age.value + ' \r\n ' + 
-            'Email: ' + email.value + ' \r\n ' + 
-            'Country: ' + country.value + ' \r\n ' + 
-            'Message: ' + msg.value;
-        
-        // Convert the text to BLOB.
-        const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const sFileName = 'formData.txt';	   // The file to save the data.
 
-        let newLink = document.createElement("a");
-        newLink.download = sFileName;
-
-        if (window.webkitURL != null) {
-            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-            console.log (newLink);
-        }
-        else {
-            newLink.href = window.URL.createObjectURL(textToBLOB);
-            newLink.style.display = "none";
-            document.body.appendChild(newLink);
-        }
-
-        newLink.click(); 
-    }
-</script>
 </html>
