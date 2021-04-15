@@ -3,7 +3,7 @@
 </head>
 <body>
 <div>
-<form action="https://freecatphotoapp.com/submit-cat-photo">
+<form action="https://docs.google.com/spreadsheets/d/1gXb6gHyqe3QUcHQ5EWn1rvwylS5ASo-Eb-1dm74GeVo/edit#gid=0">
     <input type="text" placeholder="cat photo URL">
     <button type="submit">submit</button></form>
     </div>
